@@ -18,3 +18,14 @@ export interface Entry {
   type: EntryType
   created_at: string
 }
+
+export const CATEGORIES = [
+  'Electricity','Gas','Water','Internet','Rent','Contents Insurance','Parking',
+  'Shared Groceries','Cleaning Supplies','Toiletries','Kitchen Consumables',
+  'Repairs/Maintenance','Laundry','Other'
+]
+
+export const MONTHS = [
+  'All','January','February','March','April','May','June',
+  'July','August','September','October','November','December'
+]
