@@ -90,10 +90,6 @@ export default function Home() {
   const net = summary?.totals.net ?? 0
   const settled = Math.abs(net) < 0.01
 
-  const S: React.CSSProperties = {
-    bg: '--bg' as unknown as string,
-  }
-  void S
 
   return (
     <div style={{maxWidth:900,margin:'0 auto',padding:'20px 16px',minHeight:'100vh',fontFamily:'system-ui,sans-serif',background:'#0f1117',color:'#e8eaf6'}}>
