@@ -209,7 +209,7 @@ export default function Home() {
                     <span style={{fontWeight:700,fontSize:14,color:isReimb?green:text}}>
                       {isReimb?'+':''}NZD {parseFloat(entry.amount).toFixed(2)}
                     </span>
-                    <button onClick={()=>delEntry(entry.id,entry.type)} style={{background:'none',border:'none',cursor:'pointer',color:muted,fontSize:14,padding:'2px 4px',opacity:.6}} title="Delete">🗑</button>
+                    <button onClick={()=>delEntry(entry.id,entry.type)} style={{background:'rgba(239,68,68,.15)',border:'1px solid rgba(239,68,68,.3)',cursor:'pointer',color:'#ef4444',fontSize:12,padding:'4px 8px',borderRadius:6,fontWeight:600}} title="Delete">✕</button>
                   </div>
                 </div>
               )
@@ -253,7 +253,7 @@ export default function Home() {
                 </div>
                 <div style={{display:'flex',alignItems:'center',gap:8}}>
                   <span style={{fontWeight:700,fontSize:14}}>NZD {parseFloat(exp.amount).toFixed(2)}</span>
-                  <button onClick={()=>delEntry(exp.id,'expense')} style={{background:'none',border:'none',cursor:'pointer',color:muted,fontSize:14,padding:'2px 4px',opacity:.6}}>🗑</button>
+                  <button onClick={()=>delEntry(exp.id,'expense')} style={{background:'rgba(239,68,68,.15)',border:'1px solid rgba(239,68,68,.3)',cursor:'pointer',color:'#ef4444',fontSize:12,padding:'4px 8px',borderRadius:6,fontWeight:600}}>✕</button>
                 </div>
               </div>
             ))}
@@ -288,7 +288,7 @@ export default function Home() {
                 </div>
                 <div style={{display:'flex',alignItems:'center',gap:8}}>
                   <span style={{fontWeight:700,fontSize:14,color:green}}>NZD {parseFloat(r.amount).toFixed(2)}</span>
-                  <button onClick={()=>delEntry(r.id,'reimbursement')} style={{background:'none',border:'none',cursor:'pointer',color:muted,fontSize:14,padding:'2px 4px',opacity:.6}}>🗑</button>
+                  <button onClick={()=>delEntry(r.id,'reimbursement')} style={{background:'rgba(239,68,68,.15)',border:'1px solid rgba(239,68,68,.3)',cursor:'pointer',color:'#ef4444',fontSize:12,padding:'4px 8px',borderRadius:6,fontWeight:600}}>✕</button>
                 </div>
               </div>
             ))}
