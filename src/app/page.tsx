@@ -37,9 +37,9 @@ export default function Home() {
     const p = `month=${month}&year=${year}`
     try {
       const [s,e,r] = await Promise.all([
-        fetch(`/api/summary?${p}`,{cache:'no-store'}).then(r=>r.json()),
-        fetch(`/api/expenses?${p}`,{cache:'no-store'}).then(r=>r.json()),
-        fetch(`/api/reimbursements?${p}`,{cache:'no-store'}).then(r=>r.json()),
+        fetch(`/api/summary?${p}&_=${Date.now()}`,{cache:'no-store'}).then(r=>r.json()),
+        fetch(`/api/expenses?${p}&_=${Date.now()}`,{cache:'no-store'}).then(r=>r.json()),
+        fetch(`/api/reimbursements?${p}&_=${Date.now()}`,{cache:'no-store'}).then(r=>r.json()),
       ])
       setSummary(s); setExpenses(Array.isArray(e)?e:[]); setReimbursements(Array.isArray(r)?r:[])
     } catch { showToast('Error loading data',false) }
