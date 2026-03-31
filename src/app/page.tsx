@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
 
-const CATEGORIES = ['Electricity & Internet','Rent','Shared Groceries','Cleaning Supplies','Kitchen Consumables','Laundry','Other']
+const CATEGORIES = ['Electricity & Internet','Rent','Shared Groceries','Cleaning Supplies','Kitchen Consumables','Other']
 const MONTHS = ['All','January','February','March','April','May','June','July','August','September','October','November','December']
 const YEARS = ['2024','2025','2026','2027']
 
