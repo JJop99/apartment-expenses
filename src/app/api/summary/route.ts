@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
     const t = rows[0]
     const bycat: Record<string,{total:number;jacopo_owes:number;amin_owes:number}> = {}
     for (const row of byCategory) bycat[row.category] = { total: row.total, jacopo_owes: row.jacopo_owes, amin_owes: row.amin_owes }
-    const net = t.jacopo_paid - t.jacopo_owes - t.jacopo_reimbursed + t.amin_reimbursed
+    const net = t.jacopo_paid - t.jacopo_owes - t.amin_reimbursed + t.jacopo_reimbursed
     return NextResponse.json({ byCategory: bycat, totals: { ...t, net } }, { headers: { 'Cache-Control': 'no-store' } })
   } catch(e) {
     console.error(e)
